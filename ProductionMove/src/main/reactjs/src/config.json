@@ -1,0 +1,307 @@
+{
+    "server" : {
+        "url" : "http://localhost:5000",
+        "api" : {
+            "login" : {
+                "url" : "http://localhost:5000/api/login"
+            },
+            "stock" : {
+                "get" : {
+                    "url" : "http://localhost:5000/api/stock/get"
+                }
+            },
+            "product" : {
+                "get" : {
+                    "url" : "http://localhost:5000/api/product/get"
+                },
+                "list" : {
+                    "url" : "http://localhost:5000/api/product/list"
+                },
+                "statistic" : {
+                    "url" : "http://localhost:5000/api/product/statusStatistic"
+                }
+            },
+            "productBatch" : {
+                "create" : {
+                    "url" : "http://localhost:5000/api/product_batch/create"
+                },
+                "list" : {
+                    "url" : "http://localhost:5000/api/product_batch/list",
+                    "notImport" : {
+                        "url" : "http://localhost:5000/api/product_batch/list/not_import"
+                    } 
+                },
+                "import" : {
+                    "url" : "http://localhost:5000/api/factory/stock/import"
+                },
+                "product" : {
+                    "list" : {
+                        "url" : "http://localhost:5000/api/product_batch/product/list"
+                    }
+                }
+            },
+            "productLine" : {
+                "update" : {
+                    "url" : "http://localhost:5000/api/product_line/update"
+                },
+                "create" : {
+                    "url" : "http://localhost:5000/api/product_line/create"
+                },
+                "delete" : {
+                    "url" : "http://localhost:5000/api/product_line/delete"
+                },
+                "list" : {
+                    "url" : "http://localhost:5000/api/product_line/list"
+                }
+            },
+            "order" : {
+                "create" : {
+                    "url" : "http://localhost:5000/api/order/create"
+                },
+                "list" : {
+                    "url" : "http://localhost:5000/api/order/list"
+                },
+                "delete" : {
+                    "url" : "http://localhost:5000/api/order/delete"
+                }
+            },
+            "customer" : {
+                "update" : {
+                    "url" : "http://localhost:5000/api/customer/update"
+                },
+                "create" : {
+                    "url" : "http://localhost:5000/api/customer/create"
+                },
+                "get" : {
+                    "url" : "http://localhost:5000/api/customer/get"
+                },
+                "list" : {
+                    "url" : "http://localhost:5000/api/customer/list"
+                },
+                "delete" : {
+                    "url" : "http://localhost:5000/api/customer/delete"
+                }
+            },
+            "account" : {
+                "create" : {
+                    "url" : "http://localhost:5000/api/account/create"
+                },
+                "update" : {
+                    "url" : "http://localhost:5000/api/account/update"
+                },
+                "get" : {
+                    "url" : "http://localhost:5000/api/account/get"
+                },
+                "delete" : {
+                    "url" : "http://localhost:5000/api/account/delete"
+                },
+                "data" : {
+                    "url" : "http://localhost:5000/api/account/getCurrent"
+                }
+            },
+            "distributor" : {
+                "productStatistic" : {
+                    "url" : "http://localhost:5000/api/distributor/productStatistic",
+                    "status" : {
+                        "url": "http://localhost:5000/api/distributor/productStatistic/status"
+                    }
+                },
+                "saleStatistic" : {
+                    "perMonth" : {
+                        "url" : "http://localhost:5000/api/distributor/saleStatistic/perMonth"
+                    },
+                    "perYear" : {
+                        "url" : "http://localhost:5000/api/distributor/saleStatistic/perYear"
+                    }
+                },
+                "producTransaction" : {
+                    "inComing" : {
+                        "url" : "http://localhost:5000/api/distributor/productTransaction/incoming"
+                    },
+                    "import" : {
+                        "url" : "http://localhost:5000/api/distributor/productTransaction/import"
+                    }
+                },
+                "productRecall" : {
+                    "url" : "http://localhost:5000/api/distributor/productRecall"
+                },
+                "warranty" : {
+                    "request" : {
+                        "url" : "http://localhost:5000/api/distributor/warranty/request"
+                    },
+                    "list" : {
+                        "url" : "http://localhost:5000/api/distributor/warranty/list"
+                    },
+                    "return" : {
+                        "url" : "http://localhost:5000/api/distributor/warranty/return"
+                    },
+                    "finish" : {
+                        "url" : "http://localhost:5000/api/distributor/warranty/finish"
+                    }
+                },
+                "create" : {
+                    "uri": "/api/distributor/create",
+                    "url" : "http://localhost:5000/api/distributor/create"
+                },
+                "update" : {
+                    "url" : "http://localhost:5000/api/distributor/update"
+                },
+                "get" : {
+                    "url" : "http://localhost:5000/api/distributor/get"
+                },
+                "list" : {
+                    "url" : "http://localhost:5000/api/distributor/list"
+                },
+                "delete" : {
+                    "url" : "http://localhost:5000/api/distributor/delete"
+                },
+                "stock" : {
+                    "export" : {
+                        "url" : "http://localhost:5000/api/distributor/stock/export"
+                    },
+                    "list": {
+                        "url" : "http://localhost:5000/api/distributor/stock/list"
+                    },
+                    "product" : {
+                        "list" : {
+                            "url" : "http://localhost:5000/api/distributor/stock/product/list",
+                            "sellable" : {
+                                "url" : "http://localhost:5000/api/distributor/stock/product/list/saleable"
+                            }
+                        }
+                    }
+                },
+                "sold" : {
+                    "list" : {
+                        "url" : "http://localhost:5000/api/distributor/sold/list"
+                    }
+                }
+            },
+            "factory" : {
+                "create" : {
+                    "url" : "http://localhost:5000/api/factory/create"
+                },
+                "update" : {
+                    "url" : "http://localhost:5000/api/factory/update"
+                },
+                "get" : {
+                    "url" : "http://localhost:5000/api/factory/get"
+                },
+                "list" : {
+                    "url" : "http://localhost:5000/api/factory/list"
+                },
+                "delete" : {
+                    "url" : "http://localhost:5000/api/factory/delete"
+                },
+                "stock" : {
+                    "product" : {
+                        "incoming" : {
+                            "url" : "http://localhost:5000/api/factory/stock/product/incoming"
+                        },
+                        "import" : {
+                            "url" : "http://localhost:5000/api/factory/stock/product/import"
+                        },
+                        "errorReturn": {
+                            "url" : "http://localhost:5000/api/factory/stock/product/errorReturn"
+                        },
+                        "statusStatistic" : {
+                            "url" : "http://localhost:5000/api/factory/productStatusStatistic"
+                        },
+                        "statistic" : {
+                            "url" : "http://localhost:5000/api/factory/productStatistic",
+                            "perMonth" : {
+                                "url": "http://localhost:5000/api/factory/productStatistic/perMonth"
+                            },
+                            "perQuarter" : {
+                                "url": "http://localhost:5000/api/factory/productStatistic/perQuarter"
+                            },
+                            "perYear" : {
+                                "url": "http://localhost:5000/api/factory/productStatistic/perYear"
+                            },
+                            "error": {
+                                "perLine" : {
+                                    "url" : "http://localhost:5000/api/factory/productStatistic/error/line"
+                                },
+                                "perWarrantyCenter" : {
+                                    "url" : "http://localhost:5000/api/factory/productStatistic/error/warranty"
+                                }
+                            }
+                        },
+                        "export" : {
+                            "url" : "http://localhost:5000/api/factory/stock/product/export"
+                        },
+                        "errorList" : {
+                            "url": "http://localhost:5000/api/factory/stock/product/errorList"
+                            
+                        },
+                        "list" : {
+                            "url" : "http://localhost:5000/api/factory/stock/product/list",
+                            "exportAble" : {
+                                "url" : "http://localhost:5000/api/factory/stock/product/list/exportable"
+                            }
+                        }
+                    },
+                    "export" : {
+                        "url": "http://localhost:5000/api/factory/stock/export"
+                    },
+                    "batch" : {
+                        "list": {
+                            "url" : "http://localhost:5000/api/factory/stock/batch/list"
+                        },
+                        "notImport" : {
+                            "url" : "http://localhost:5000/api/factory/stock/batch/notImport"
+                        }
+                    }
+                }
+            },
+            "warranty" : {
+                "create" : {
+                    "url" : "http://localhost:5000/api/warranty/create"
+                },
+                "update" : {
+                    "url" : "http://localhost:5000/api/warranty/update"
+                },
+                "get" : {
+                    "url" : "http://localhost:5000/api/warranty/get"
+                },
+                "list" : {
+                    "url" : "http://localhost:5000/api/warranty/list"
+                },
+                "delete" : {
+                    "url" : "http://localhost:5000/api/warranty/delete"
+                },
+                "warranty" : {
+                    "history": {
+                        "url" : "http://localhost:5000/api/warranty/warranty/history"
+                    },
+                    "statistic" : {
+                        "url" : "http://localhost:5000/api/warranty/warrantyStatistic"
+                    },
+                    "returnFactory" : {
+                        "url" : "http://localhost:5000/api/warranty/warranty/return_factory"
+                    },
+                    "finish" : {
+                        "url" : "http://localhost:5000/api/warranty/warranty/finish"
+                    },
+                    "request" : {
+                        "list" : {
+                            "url" : "http://localhost:5000/api/warranty/warranty/request/list"
+                        }
+                    },
+                    "doing" : {
+                        "url" : "http://localhost:5000/api/warranty/warranty/doing"
+                    },
+                    "accept" : {
+                        "url" : "http://localhost:5000/api/warranty/warranty/accept"
+                    },
+                    "create" : {
+                        "url" : "http://localhost:5000/api/warranty/warranty/create"
+                    },
+                    "list" : {
+                        "url" : "http://localhost:5000/api/warranty/warranty/list"
+                    }
+                }
+            }
+        }
+    }
+}

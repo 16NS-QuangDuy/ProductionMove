@@ -1,0 +1,32 @@
+package com.hust.productionmove.repository;
+
+import com.hust.productionmove.entity.Product;
+import com.hust.productionmove.entity.ProductBatch;
+import com.hust.productionmove.entity.ProductLine;
+
+import java.util.List;
+
+import com.hust.productionmove.entity.Stock;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface ProductRepository extends JpaRepository<Product, Long> {
+    List<Product> findByBatch(ProductBatch batch);
+
+    List<Product> findAllByBatchAndStatus(ProductBatch productBatch, String status);
+
+    List<Product> findAllByStock(Stock stock);
+
+    List<Product> findAllByStockAndStatus(Stock stock, String status);
+
+    Long countAllByStatus(String status);
+
+    Long countAllByBatch(ProductBatch productBatch);
+
+    Long countAllByStock(Stock stock);
+
+    Long countAllByStatusAndStock(String status, Stock stock);
+
+    Long countAllByProductLineAndStatus(ProductLine productLine, String status);
+}

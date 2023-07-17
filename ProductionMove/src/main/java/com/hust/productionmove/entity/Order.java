@@ -1,0 +1,33 @@
+package com.hust.productionmove.entity;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
+import java.time.LocalDate;
+import java.util.List;
+
+@Table(name = "orders")
+@Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class Order {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+    private LocalDate orderDate;
+
+    @ManyToOne(cascade = CascadeType.MERGE)
+    @JoinColumn(name = "distributor_id", updatable = false, nullable = false)
+    private Distributor distributor;
+
+    @ManyToOne(cascade = CascadeType.MERGE)
+    @JoinColumn(name = "customer_id")
+    private Customer customer;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "order", fetch = FetchType.EAGER)
+//    @JsonManagedReference
+    private List<OrderDetail> orderDetails;
+}

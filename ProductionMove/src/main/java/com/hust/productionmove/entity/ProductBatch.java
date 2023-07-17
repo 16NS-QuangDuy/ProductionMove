@@ -1,0 +1,53 @@
+package com.hust.productionmove.entity;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
+
+import java.time.LocalDate;
+
+@Table(name = "batch")
+@Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class ProductBatch {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+
+    @ManyToOne(cascade = CascadeType.MERGE)
+    @JoinColumn(name = "stock_id")
+    private Stock stock;
+
+    @Column(nullable = false)
+    private LocalDate manufacturingDate;
+
+    @Column(nullable = false)
+    private Long warrantyPeriod;
+
+    @ManyToOne(cascade = CascadeType.MERGE)
+    @JoinColumn(name = "factory_id", nullable = false, updatable = false)
+    //  Cở sở sản xuất ra lô hàng
+    private Factory factory;
+
+    @ManyToOne
+    @JoinColumn(name = "product_line_id", nullable = false, updatable = false)
+    private ProductLine productLine;
+
+    @Column(nullable = false)
+    private Long productQuantity;
+
+    public ProductBatch(
+            Stock stock,
+            LocalDate manufacturingDate,
+            Factory factory,
+            ProductLine productLine) {
+        this.stock = stock;
+        this.manufacturingDate = manufacturingDate;
+        this.factory = factory;
+        this.productLine = productLine;
+    }
+}

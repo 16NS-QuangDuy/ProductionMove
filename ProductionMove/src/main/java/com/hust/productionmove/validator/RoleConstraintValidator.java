@@ -1,0 +1,28 @@
+package com.hust.productionmove.validator;
+
+import javax.validation.ConstraintValidator;
+import javax.validation.ConstraintValidatorContext;
+
+import com.hust.productionmove.entity.UserType;
+
+public class RoleConstraintValidator implements
+        ConstraintValidator<RoleConstraint, String> {
+
+    @Override
+    public void initialize(RoleConstraint roleConstraint) {
+
+    }
+
+    @Override
+    public boolean isValid(String role, ConstraintValidatorContext context) {
+        if (role == null) {
+            return false;
+        }
+
+        return switch (role) {
+            case UserType.WARRANTY_CENTER, UserType.DISTRIBUTOR, UserType.MANUFACTURE, UserType.ADMIN -> true;
+            default -> false;
+        };
+    }
+
+}

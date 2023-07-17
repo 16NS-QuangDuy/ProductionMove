@@ -1,0 +1,8 @@
+package com.hust.productionmove.entity;
+
+public class UserType {
+    public static final String DISTRIBUTOR = "Distributor";
+    public static final String MANUFACTURE = "Manufacture";
+    public static final String WARRANTY_CENTER = "Warranty center";
+    public static final String ADMIN = "Admin";
+}
