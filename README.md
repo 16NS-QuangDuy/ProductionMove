@@ -7,7 +7,6 @@ Sử dụng JDK 18 trên Intelliji
 1. [Công nghệ sử dụng](#tech)
 2. [Yêu cầu môi trường](#environment)
 3. [Hướng dẫn chạy](#run)
-4. [Đặc tả API](#api)
 
 <a name="tech"></a>
 ## Công nghệ sử dụng
